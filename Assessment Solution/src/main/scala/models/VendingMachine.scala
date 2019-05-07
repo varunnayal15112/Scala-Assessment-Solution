@@ -1,10 +1,10 @@
 package models
 
-class VendingMachine(private var itemsList:List[String],
+case class VendingMachine(private var itemsList:List[String],
                      private var coinsList : List[Int],
                      private var notesList : List[Int]) {
 
-  val mapOfItemsAndTheirPrice = scala.collection.mutable.Map[String,Int]()
+  private var mapOfItemsAndTheirPrice = scala.collection.mutable.Map[String,Int]()
 
   def printMapOfItemsAndTheirPrice() = {
     println(mapOfItemsAndTheirPrice)
@@ -64,5 +64,5 @@ class VendingMachine(private var itemsList:List[String],
     println(notesList)
     true
   }
-
 }
+
